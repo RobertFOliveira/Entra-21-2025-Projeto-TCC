@@ -1,0 +1,242 @@
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  .navbar-actions {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+
+/* Estilo geral do navbar */
+.navbar {
+  background-color: #83f088;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo img {
+  width: 32px;
+  height: auto;
+}
+
+.navbar-logo span {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+/* Links principais */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  transition: background 0.3s;
+}
+
+.navbar-links li a:hover {
+  background-color: #002244;
+  border-radius: 4px;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  background: white;
+  color: black;
+  list-style: none;
+  padding: 10px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.dropdown-menu li a {
+  color: #333;
+  padding: 8px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Ações à direita */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-actions a {
+  color: white;
+  text-decoration: none;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.search-box input {
+  border: none;
+  padding: 6px 8px;
+  outline: none;
+  width: 120px;
+}
+
+.search-box button {
+  border: none;
+  background: transparent;
+  padding: 6px;
+  cursor: pointer;
+  color: #003366;
+}
+
+/**/
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding-top: 70px; /* altura da navbar */
+}
+
+
+/* Centralização do conteúdo */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px); /* Altura da tela - altura da navbar */
+  padding-top: 70px;
+  flex-direction: column;
+}
+
+
+.content {
+  text-align: center;
+}
+
+/* Logo com animação */
+.logo {
+  width: 500px;
+  height: auto;
+  animation: growIn 1.2s ease-in-out;
+}
+
+
+.btn-entrar:hover {
+  background-color: #45a049;
+}
+
+/* Ícones de redes sociais */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #333;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #4CAF50;
+}
+
+/* Rodapé */
+footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Animação */
+@keyframes growIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .logo {
+    width: 150px;
+  }
+
+  .btn-entrar {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+  }
+}
